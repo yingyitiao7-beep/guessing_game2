@@ -9,6 +9,10 @@ fn main(){
     //让secret_number为32位无符号整型，然后执行rand库也就是随机数，之后在调用了random_range把数字范围执行到（1到100）之间
     //println!("the secret number is: {}", secret_number);
 
+    /*时隔多日回顾又有新的发现 rand是我们在Cargi.toml引入的第三方随机数的库 我们通过::来调用他 
+     rng()他就像是一个摇号机器，他会拿到一个随机数 括号代表我们执行这个函数
+     random_range 相当于限制器，他会生成指定()区间内的随机数 */
+
     loop {//开始loop 循环
         println!("请输入你猜的数字: ");
         let mut guess:String  = String::new();
